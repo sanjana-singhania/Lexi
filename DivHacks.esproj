@@ -27,8 +27,7 @@ metaInfo:
     - Front
     - Back
   lensClientCompatibilities:
-    - Mobile
-    - Web
+    - Spectacles
   iconHash: ""
   videoPreviewHash: ""
   fromTemplateName: Default

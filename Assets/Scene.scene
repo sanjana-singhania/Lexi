@@ -1919,8 +1919,8 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -0.105285, y: -9.480859, z: -40.882362}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    position: {x: -0.105285, y: -19.153603, z: -40.882362}
+    rotation: {x: -70.450752, y: -2.244397, z: 2.118305}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
@@ -10225,7 +10225,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: -9.137302, z: 3.000000}
+    position: {x: 0.000000, y: -9.137302, z: -3.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 8.000000, y: 8.000000, z: 1.000000}
     hasSegmentScaleCompensation: false

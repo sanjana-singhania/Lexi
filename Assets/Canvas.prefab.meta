@@ -1,0 +1,105 @@
+- !<AssetImportMetadata/d9194bc5-c9d0-4318-b3eb-6241fb4179d6>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 398b4f8f-77b1-4c2e-8e99-534c5edd857f
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 398b4f8f-77b1-4c2e-8e99-534c5edd857f
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    ObjectPrefab: !<own> 05d3abae-7201-4955-9424-54bf5c9c280d
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/32215aa2-bbcf-4197-81e2-5dba78513082>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/00d548c7-b8ca-43dd-9499-bc7997d793be>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000001, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 15.999999, y: 15.999999, z: 16.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> dea79f10-8a57-4d9a-b023-acaa62c96709
+- !<ObjectPrefab/041c2f30-19e7-41b5-8576-92b6142d7224>
+  PackagePath: ""
+  objects:
+    - !<own> 26b9758a-f1d4-4f22-932e-322b07dea260
+  LazyLoading: false
+  RetainAssets: true
+- !<ObjectPrefabAssetData/05d3abae-7201-4955-9424-54bf5c9c280d>
+  SourceRemaps:
+    - 1eae8b04-677e-4421-94fc-97d9ec9b6b14: 00d548c7-b8ca-43dd-9499-bc7997d793be
+    - 2395d2f1-98e5-4cc5-b714-8c2620e88693: 52947cbc-d65e-4706-b6b3-56c5fabb3c85
+    - 86cd6347-0c32-495f-b138-1b127eb2f16a: dea79f10-8a57-4d9a-b023-acaa62c96709
+    - bce6d6b2-f6a1-4bd2-adac-c1791b24edbe: 26b9758a-f1d4-4f22-932e-322b07dea260
+    - fec0a1e8-ae47-48fc-a428-7d7d853459ec: 4022e523-d1f7-42ef-885d-376415d262d4
+  SourceState: !<own> 041c2f30-19e7-41b5-8576-92b6142d7224
+- !<SceneObject/26b9758a-f1d4-4f22-932e-322b07dea260>
+  PrefabRemaps:
+    []
+  Name: Canvas
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.039602, y: 4.206788, z: 5.178747}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 0.269046, y: 0.299772, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 00d548c7-b8ca-43dd-9499-bc7997d793be
+  Components:
+    - !<own> 4022e523-d1f7-42ef-885d-376415d262d4
+    - !<own> 52947cbc-d65e-4706-b6b3-56c5fabb3c85
+- !<Canvas/4022e523-d1f7-42ef-885d-376415d262d4>
+  PrefabRemaps:
+    []
+  Name: Canvas
+  Enabled: true
+  UnitType: World
+  SortingType: Hierarchy
+  WorldSpaceRect:
+    left: -15.000000
+    bottom: -20.000000
+    right: 15.000000
+    top: 20.000000
+- !<ScriptComponent/52947cbc-d65e-4706-b6b3-56c5fabb3c85>
+  PrefabRemaps:
+    []
+  Name: handTracking
+  Enabled: true
+  ScriptAsset: !<reference> 16290084-bca5-4110-baf4-e77a015d5513
+  ScriptInputsDefault:
+    button: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      modelPrefab: !<reference.ObjectPrefab> 0270245f-be8c-4747-91e4-73f6649037b2
+      button: !<MappingBased.ToggleButton> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
+- !<Image/dea79f10-8a57-4d9a-b023-acaa62c96709>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> f45b7800-4042-4fca-89a4-c7cea585eaed
+  FlipX: false
+  FlipY: false
+  Pivot: {x: 0.000000, y: 0.000000}

@@ -1,0 +1,39 @@
+- !<AssetImportMetadata/9f531933-04a6-4e7c-89db-8267189c599f>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 16290084-bca5-4110-baf4-e77a015d5513
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 16290084-bca5-4110-baf4-e77a015d5513
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 8e973374-4c54-4e44-9a61-f686857b5a45
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/14ac5867-b24f-4269-92ec-284e5a44baed>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/8e973374-4c54-4e44-9a61-f686857b5a45>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    button: false
+    modelPrefab: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - modelPrefab: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      button: !<MappingBased.ToggleButton> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Asset.ObjectPrefab modelPrefab
+    - // @input ToggleButton button

@@ -1,0 +1,83 @@
+- !<ObjectPrefab/398b4f8f-77b1-4c2e-8e99-534c5edd857f>
+  PackagePath: ""
+  objects:
+    - !<own> bce6d6b2-f6a1-4bd2-adac-c1791b24edbe
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/1eae8b04-677e-4421-94fc-97d9ec9b6b14>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000001, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 15.999999, y: 15.999999, z: 16.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 86cd6347-0c32-495f-b138-1b127eb2f16a
+- !<ScriptComponent/2395d2f1-98e5-4cc5-b714-8c2620e88693>
+  PrefabRemaps:
+    []
+  Name: handTracking
+  Enabled: true
+  ScriptAsset: !<reference> 16290084-bca5-4110-baf4-e77a015d5513
+  ScriptInputsDefault:
+    button: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      modelPrefab: !<reference.ObjectPrefab> 0270245f-be8c-4747-91e4-73f6649037b2
+      button: !<MappingBased.ToggleButton> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
+- !<Image/86cd6347-0c32-495f-b138-1b127eb2f16a>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> f45b7800-4042-4fca-89a4-c7cea585eaed
+  FlipX: false
+  FlipY: false
+  Pivot: {x: 0.000000, y: 0.000000}
+- !<SceneObject/bce6d6b2-f6a1-4bd2-adac-c1791b24edbe>
+  PrefabRemaps:
+    []
+  Name: Canvas
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.039602, y: 4.206788, z: 5.178747}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 0.269046, y: 0.299772, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 1eae8b04-677e-4421-94fc-97d9ec9b6b14
+  Components:
+    - !<own> fec0a1e8-ae47-48fc-a428-7d7d853459ec
+    - !<own> 2395d2f1-98e5-4cc5-b714-8c2620e88693
+- !<Canvas/fec0a1e8-ae47-48fc-a428-7d7d853459ec>
+  PrefabRemaps:
+    []
+  Name: Canvas
+  Enabled: true
+  UnitType: World
+  SortingType: Hierarchy
+  WorldSpaceRect:
+    left: -15.000000
+    bottom: -20.000000
+    right: 15.000000
+    top: 20.000000

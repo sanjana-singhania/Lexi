@@ -1,3 +1,4 @@
+import { PinchButton } from "SpectaclesInteractionKit/Components/UI/PinchButton/PinchButton";
 import { ToggleButton } from "SpectaclesInteractionKit/Components/UI/ToggleButton/ToggleButton";
 import { HandInputData } from "SpectaclesInteractionKit/Providers/HandInputData/HandInputData";
 import { Keypoint } from "SpectaclesInteractionKit/Providers/HandInputData/Keypoint";
@@ -14,6 +15,7 @@ export class NewScript extends BaseScriptComponent {
     @input
     button: ToggleButton;
     points = [];
+    spawns = [];
 
     onAwake() {
         // Retrieve HandInputData from SIK's definitions.
@@ -32,7 +34,6 @@ export class NewScript extends BaseScriptComponent {
         this.createEvent('UpdateEvent').bind(()=>{
             this.onUpdate(hand);
         });
-        
     }
 
     onUpdate(hand : TrackedHand) {
@@ -40,6 +41,13 @@ export class NewScript extends BaseScriptComponent {
         if (isDrawing &&  hand.isPinching) {
             this.points.push(hand.indexTip);
             this.spawn3DObject(hand.indexTip);
+        } else {
+            this.spawns.forEach((object) => {
+                if (object!= null && object !== undefined){
+                    object.destroy();
+                }
+            })
+            this.spawns = []
         }
         
     }
@@ -65,6 +73,7 @@ export class NewScript extends BaseScriptComponent {
             (prevKeyPoint.position.y + keypoint.position.y)/2, 
             this.sceneObject.getTransform().getLocalPosition().z)); // Adjust as needed
 
+        this.spawns.push(newObject, medianObject);
     }
     
 }

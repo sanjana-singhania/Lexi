@@ -13,6 +13,7 @@ export class NewScript extends BaseScriptComponent {
     modelPrefab: ObjectPrefab;
     @input
     button: ToggleButton;
+    points = [];
 
     onAwake() {
         // Retrieve HandInputData from SIK's definitions.
@@ -25,13 +26,6 @@ export class NewScript extends BaseScriptComponent {
     }    
 
     onStart( handInputData: HandInputData) {
-        // let toggleButton = this.sceneObject.getComponent(
-        //     ToggleButton.getTypeName()
-        // );
-
-        // if (this.button.onStateChanged) {
-        //     this.isDrawing = !this.isDrawing;
-        // }
 
         let hand = handInputData.getHand("right");
 
@@ -42,19 +36,17 @@ export class NewScript extends BaseScriptComponent {
     }
 
     onUpdate(hand : TrackedHand) {
-
         let isDrawing = this.button.isToggledOn;
         if (isDrawing &&  hand.isPinching) {
-            print("here")
-            this.spawn3DObject(hand.indexUpperJoint);
+            this.points.push(hand.indexTip);
+            this.spawn3DObject(hand.indexTip);
         }
         
-
     }
 
-    spawn3DObject( keypoint : Keypoint) {
-        if (!this.modelPrefab) {
-            print("Model prefab is not available");
+    spawn3DObject(keypoint : Keypoint) {
+        if (!this.modelPrefab || !this.button) {
+            print("some components are missing  is not available");
             return;
         }
 
@@ -62,7 +54,17 @@ export class NewScript extends BaseScriptComponent {
         let newObject = this.modelPrefab.instantiate(this.sceneObject);
 
         // Optionally, set the position, scale, and rotation of the new object
-        newObject.getTransform().setLocalPosition(new vec3(keypoint.position.x,  keypoint.position.y, keypoint.position.z - 20.0 )); // Adjust as needed
+        newObject.getTransform().setLocalPosition(new vec3(keypoint.position.x,  keypoint.position.y, 
+            this.sceneObject.getTransform().getLocalPosition().z)); // Adjust as needed
+
+        let medianObject = this.modelPrefab.instantiate(this.sceneObject);
+        let prevKeyPoint = this.points.pop();
+
+        medianObject.getTransform().setLocalPosition(new vec3(
+            (prevKeyPoint.position.x + keypoint.position.x)/2,
+            (prevKeyPoint.position.y + keypoint.position.y)/2, 
+            this.sceneObject.getTransform().getLocalPosition().z)); // Adjust as needed
+
     }
     
 }

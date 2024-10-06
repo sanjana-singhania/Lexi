@@ -8,3 +8,7 @@ jsconfig.json
 tsconfig.json
 .DS_Store
 # Shipped by Lens Studio
+
+
+# for env files
+.env

@@ -1309,7 +1309,7 @@
   LocalTransform:
     position: {x: 2.331026, y: -9.137302, z: 30.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000002, y: 1.000001, z: 1.000000}
+    scale: {x: 2.000000, y: 2.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
@@ -1556,7 +1556,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> cfbe327e-6a06-4185-a95c-6321f1a44373
+    - !<reference> 0ce97f2f-3764-4b43-8816-dffe5bf141f6
   Text: 3D Text
   Editable: false
   ShowEditingPreview: true
@@ -2202,7 +2202,7 @@
   PrefabRemaps:
     []
   Name: Title
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 14.000000, z: 1.000000}

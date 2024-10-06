@@ -24,7 +24,7 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    authKey: true
+    authKey: false
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:

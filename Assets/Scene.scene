@@ -2436,9 +2436,9 @@
   UnitType: World
   SortingType: Hierarchy
   WorldSpaceRect:
-    left: -15.000000
+    left: -20.000000
     bottom: -20.000000
-    right: 15.000000
+    right: 20.000000
     top: 20.000000
 - !<SceneObject/539a4461-b4aa-4fba-acaa-2bef14514394>
   PrefabRemaps:

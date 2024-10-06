@@ -41,11 +41,10 @@ export class NewScript extends BaseScriptComponent {
         if (isDrawing &&  hand.isPinching) {
             this.points.push(hand.indexTip);
             this.spawn3DObject(hand.indexTip);
-        } else {
+        } 
+        else {
             this.spawns.forEach((object) => {
-                if (object!= null && object !== undefined){
                     object.destroy();
-                }
             })
             this.spawns = []
         }

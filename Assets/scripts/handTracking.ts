@@ -62,7 +62,7 @@ export class NewScript extends BaseScriptComponent {
         let newObject = this.modelPrefab.instantiate(this.sceneObject);
 
         // Optionally, set the position, scale, and rotation of the new object
-        newObject.getTransform().setLocalPosition(keypoint.position); // Adjust as needed
+        newObject.getTransform().setLocalPosition(new vec3(keypoint.position.x,  keypoint.position.y, keypoint.position.z - 20.0 )); // Adjust as needed
     }
     
 }
